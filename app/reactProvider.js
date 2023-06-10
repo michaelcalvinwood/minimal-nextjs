@@ -3,7 +3,7 @@
 import { Provider } from "react-redux";
 import { store } from "../store/configStore";
 
-export function Providers({ children }) {
+export function ReactProvider({ children }) {
     return (
     <Provider store={store}>
         {children}
