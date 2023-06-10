@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { ReactProvider } from './reactProvider';
+import { ProviderRedux } from './ProviderRedux';
+import { ProviderChakra } from './ProviderChakra';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReactProvider>
+        <ProviderRedux>
           {children}
-        </ReactProvider>
+        </ProviderRedux>
       </body>
     </html>
   )
