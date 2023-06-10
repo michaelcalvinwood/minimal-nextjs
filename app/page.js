@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setMsg } from '@/store/sliceMsg';
 import { useEffect } from 'react';
 import { Button, Text } from '@chakra-ui/react';
+import * as socketService from './socketService';
 
 export default function Home() {
   const msg = useSelector(state => state.msg);
@@ -13,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch(setMsg('Done!!!'))
+      socketService.emit('echo', {msg: 'echo this'});
     }, 5000)
   })
   return (

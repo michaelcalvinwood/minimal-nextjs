@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const sliceMsg = createSlice({
-    name: 'counter',
+    name: 'msg',
     initialState: "Hello Worlds",
     reducers: {
         setMsg: (state, action) => {

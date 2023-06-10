@@ -3,7 +3,11 @@ import { Inter } from 'next/font/google'
 import { ProviderRedux } from './ProviderRedux';
 import { ProviderChakra } from './ProviderChakra';
 
+
 const inter = Inter({ subsets: ['latin'] })
+
+console.log('second process.env',process.env)
+
 
 export const metadata = {
   title: 'Create Next App',
