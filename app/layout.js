@@ -15,7 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <ProviderRedux>
-          {children}
+          <ProviderChakra>
+            {children}
+          </ProviderChakra>
         </ProviderRedux>
       </body>
     </html>
