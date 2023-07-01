@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main >
       <Text fontSize="2rem" textAlign={'center'}>{msg}</Text>
-      <Button variant={'primary'} display='block' margin='auto'>Click</Button>
+      <Button variant={'outline'} display='block' margin='auto'>Click</Button>
     </main>
   )
 }
