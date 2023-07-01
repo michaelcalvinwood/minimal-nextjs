@@ -4,11 +4,9 @@ import { store } from "../store/configStore";
 
 import { io } from 'socket.io-client';
 import * as socketService from './socketService';
+import config from '../config.json';
 
-const socketURL = `https://echo.instantchatbot.net:6260`;
-
-console.log('hello there');
-socketService.setupTheSocket(io, socketURL, store);
+socketService.setupTheSocket(io, `${config.socketServer}:${config.socketPort}`, store);
 
 export function ProviderRedux({ children }) {
     return (
