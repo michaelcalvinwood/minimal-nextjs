@@ -6,8 +6,6 @@ import { ProviderChakra } from './ProviderChakra';
 
 const inter = Inter({ subsets: ['latin'] })
 
-console.log('second process.env',process.env)
-
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,8 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" >
+      <body className={inter.className} suppressHydrationWarning={true}>
         <ProviderRedux>
           <ProviderChakra>
             {children}
